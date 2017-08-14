@@ -7,7 +7,7 @@
   },
   "bugs": {
 	"url": "https://github.com/VickyKoblinski/t2-gs-sheets/issues"
-  }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
