@@ -1,0 +1,33 @@
+{
+  "name": "t2-gs-sheets",
+  "version": "1.0.0",
+  "description": "A Google App Script to call T2 Systems and populate a Google Spreadsheet with the data.",
+  "bin": {
+    "t2-gs": "./index.js"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "google",
+    "t2",
+    "systems",
+    "spreadsheet",
+    "sheet",
+    "script",
+    "google-app-script",
+    "app",
+    "t2-systems"
+  ],
+  "author": "Vicky Koblinski",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.11.0",
+    "handlebars": "^4.0.10"
+  }
+}
