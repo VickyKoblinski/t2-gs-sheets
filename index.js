@@ -42,7 +42,13 @@ program
               console.error(chalk.bold.red(`Error writing to ${file}.`));
               process.exit(1);
             } else {
-              console.log(chalk.bold.green(`Success! ${file} generated.`));
+              console.log(
+                chalk.bold.green(
+                  `Success! ${file} generated in \n
+                  ${process.cwd()}\n\n
+                  Now copy the contents of file to https://script.google.com/`
+                )
+              );
               process.exit();
             }
           });

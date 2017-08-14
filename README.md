@@ -15,7 +15,7 @@ $ npm install t2-gs-sheets -g
 ## Useage
 
 ```
-$ t2-gs-sheets <output-file>
+$ t2-gs <output-file>
 ```
 
 Fill out the prompt and a script will be generated in `<output-file>`. You should be able to run the script immediately from [Google App Script](https://script.google.com/).
