@@ -8,6 +8,10 @@
   "scripts": {
     "test": "test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VickyKoblinski/t2-gs-sheets.git"
+  },
   "keywords": [
     "nodejs",
     "node",
