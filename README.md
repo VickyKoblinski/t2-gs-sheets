@@ -4,6 +4,7 @@ A CLI Tool to make a [Google App Script](https://script.google.com/) that calls 
 ## Installation
 
 ```
+$ git clone https://github.com/VickyKoblinski/t2-gs-sheets.git
 $ npm install t2-gs-sheets -g
 ```
 

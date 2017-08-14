@@ -1,5 +1,6 @@
 #!/usr/bin/env node --harmony
 const fs = require("fs");
+const path = require("path")
 const Handlebars = require("handlebars");
 const co = require("co");
 const prompt = require("co-prompt");
@@ -11,7 +12,7 @@ program
   .version(pjson.version)
   .arguments("<file>")
   .action(file => {
-    co(function*() {
+    co(function* () {
       const magenta = chalk.bold.magenta;
 
       const wsdl = yield prompt(magenta("T2 WSDL: "));
@@ -21,7 +22,7 @@ program
       const password = yield prompt.password(magenta("T2 Password: "));
       const sheetID = yield prompt(magenta("Google Spreadsheet ID: "));
 
-      fs.readFile("./t2-template.js", "utf8", (err, data) => {
+      fs.readFile(path.resolve(__dirname, "./t2-template.js"), "utf8", (err, data) => {
         if (err) {
           console.error(chalk.bold.red(err));
           console.error(chalk.bold.red(`Error opening template.`));

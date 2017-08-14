@@ -2,6 +2,7 @@ var wsdl = "{{wsdl}}";
 var version = "{{version}}";
 var username = "{{username}}";
 var password = "{{password}}";
+var sheet = SpreadsheetApp.openById("{{sheetID}}");
 
 //Object containing all lots
 //{
@@ -85,8 +86,8 @@ function fetchFacilitiesList() {
   //Build SOAP Envelope
   const data = getSOAP_envelope(
     '<GetFacilityList xmlns="http://www.t2systems.com/">' +
-      getSOAP_partial() +
-      "</GetFacilityList>"
+    getSOAP_partial() +
+    "</GetFacilityList>"
   );
 
   const xml = fetchSOAP(data, "GetFacilityListResult");
@@ -118,11 +119,11 @@ function fetchFacility(uid) {
   //Builds SOAP Envelope for OccupancyData fetch
   var data = getSOAP_envelope(
     '<GetOccupancyData xmlns="http://www.t2systems.com/">' +
-      getSOAP_partial() +
-      "<facilityUid>" +
-      uid +
-      "</facilityUid>" +
-      "</GetOccupancyData>"
+    getSOAP_partial() +
+    "<facilityUid>" +
+    uid +
+    "</facilityUid>" +
+    "</GetOccupancyData>"
   );
 
   var xml = fetchSOAP(data, "GetOccupancyDataResult");
@@ -146,7 +147,6 @@ function fetchFacility(uid) {
  * Prints data to Google Spreadsheet
  */
 function printToSheets() {
-  const sheet = SpreadsheetApp.openById("{{sheetID}}");
   const range = sheet.getRange("A2:A" + sheet.getLastRow());
   const numRows = range.getNumRows();
 
