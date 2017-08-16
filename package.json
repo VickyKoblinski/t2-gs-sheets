@@ -1,6 +1,6 @@
 {
   "name": "t2-gs-sheets",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Google App Script to call T2 Systems and populate a Google Spreadsheet with the data.",
   "bin": {
     "t2-gs": "./index.js"
