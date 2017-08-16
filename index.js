@@ -39,16 +39,16 @@ program
 
           fs.writeFile(file, contents, err => {
             if (err) {
-              console.error(chalk.bold.red(err));
+              console.error(chalk.red(err));
               console.error(chalk.bold.red(`Error writing to ${file}.`));
               process.exit(1);
             } else {
               console.log(
                 chalk.bold.green(
-                  `Success! ${file} generated in \n
-                  ${process.cwd()}\n\n
-                  Now copy the contents of file to https://script.google.com/`
-                )
+                  `Success! ${file} generated in: \n`
+                ) +
+                chalk.italic(`${process.cwd()}\n\n`) +
+                `* Now copy the contents of file to https://script.google.com/`
               );
               process.exit();
             }

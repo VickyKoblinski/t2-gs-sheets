@@ -1,12 +1,12 @@
 {
   "name": "t2-gs-sheets",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Google App Script to call T2 Systems and populate a Google Spreadsheet with the data.",
   "bin": {
     "t2-gs": "./index.js"
   },
   "bugs": {
-	"url": "https://github.com/VickyKoblinski/t2-gs-sheets/issues"
+    "url": "https://github.com/VickyKoblinski/t2-gs-sheets/issues"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
